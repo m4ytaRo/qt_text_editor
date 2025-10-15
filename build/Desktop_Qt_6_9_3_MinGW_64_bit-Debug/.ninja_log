@@ -1,0 +1,21 @@
+# ninja log v6
+3	421	7822569483754799	qt_TextEditor_autogen/timestamp	3b20336329c58638
+3	421	7822569483754799	qt_TextEditor_autogen/mocs_compilation.cpp	3b20336329c58638
+3	421	7822569483754799	D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor_autogen/timestamp	3b20336329c58638
+3	421	7822569483754799	D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor_autogen/mocs_compilation.cpp	3b20336329c58638
+424	1719	7822569484257460	CMakeFiles/qt_TextEditor.dir/qt_TextEditor_autogen/mocs_compilation.cpp.obj	9a54910adfc90fe5
+426	1720	7822569484291715	CMakeFiles/qt_TextEditor.dir/main.cpp.obj	27d93ef8841bd739
+429	1745	7822569484311716	CMakeFiles/qt_TextEditor.dir/mainwindow.cpp.obj	d4b5d68260595578
+1745	1922	7822569497473749	qt_TextEditor.exe	b257b6d668fc75f8
+5	146	7822570212930682	qt_TextEditor_autogen/timestamp	3b20336329c58638
+5	146	7822570212930682	qt_TextEditor_autogen/mocs_compilation.cpp	3b20336329c58638
+5	146	7822570212930682	D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor_autogen/timestamp	3b20336329c58638
+5	146	7822570212930682	D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor_autogen/mocs_compilation.cpp	3b20336329c58638
+146	1317	7822570214336050	CMakeFiles/qt_TextEditor.dir/mainwindow.cpp.obj	d4b5d68260595578
+1317	1433	7822570226045473	qt_TextEditor.exe	b257b6d668fc75f8
+22	141	7822570779196087	qt_TextEditor_autogen/timestamp	3b20336329c58638
+22	141	7822570779196087	qt_TextEditor_autogen/mocs_compilation.cpp	3b20336329c58638
+22	141	7822570779196087	D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor_autogen/timestamp	3b20336329c58638
+22	141	7822570779196087	D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor_autogen/mocs_compilation.cpp	3b20336329c58638
+142	1324	7822570780390166	CMakeFiles/qt_TextEditor.dir/mainwindow.cpp.obj	d4b5d68260595578
+1324	1447	7822570792210954	qt_TextEditor.exe	b257b6d668fc75f8
