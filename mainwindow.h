@@ -14,10 +14,22 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+
+private slots:
+    void newFile ();
+    void openFile ();
+    void saveFile();
+    void saveFileAs();
+    void changeFont();
+    void setFontBold(bool bold);
+    void setFontUnderlined(bool underlined);
+    void setFontItalic (bool italic);
 
 private:
     Ui::MainWindow *ui;
+    QString m_currentText;
 };
 #endif // MAINWINDOW_H
