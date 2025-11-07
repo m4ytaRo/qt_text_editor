@@ -35,11 +35,13 @@ public:
     QAction *actionMakeBold;
     QAction *actionMakeItalic;
     QAction *actionMakeUnderlined;
+    QAction *actionIncreaseFontSize;
     QWidget *centralwidget;
     QTextEdit *textEdit;
     QMenuBar *menubar;
     QMenu *menuFile;
     QMenu *menuEdit;
+    QMenu *menuView;
     QStatusBar *statusbar;
     QToolBar *toolBar;
 
@@ -80,6 +82,8 @@ public:
         actionMakeUnderlined = new QAction(MainWindow);
         actionMakeUnderlined->setObjectName("actionMakeUnderlined");
         actionMakeUnderlined->setMenuRole(QAction::MenuRole::NoRole);
+        actionIncreaseFontSize = new QAction(MainWindow);
+        actionIncreaseFontSize->setObjectName("actionIncreaseFontSize");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         textEdit = new QTextEdit(centralwidget);
@@ -97,6 +101,8 @@ public:
         menuFile->setObjectName("menuFile");
         menuEdit = new QMenu(menubar);
         menuEdit->setObjectName("menuEdit");
+        menuView = new QMenu(menubar);
+        menuView->setObjectName("menuView");
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -107,12 +113,14 @@ public:
 
         menubar->addAction(menuFile->menuAction());
         menubar->addAction(menuEdit->menuAction());
+        menubar->addAction(menuView->menuAction());
         menuFile->addAction(actionNew);
         menuFile->addAction(actionOpen);
         menuFile->addAction(actionSave);
         menuFile->addAction(actionSaveAs);
         menuEdit->addAction(actionUndo);
         menuEdit->addAction(actionRedo);
+        menuView->addAction(actionIncreaseFontSize);
         toolBar->addAction(actionNew);
         toolBar->addAction(actionOpen);
         toolBar->addAction(actionSave);
@@ -138,8 +146,13 @@ public:
         actionMakeBold->setText(QCoreApplication::translate("MainWindow", "MakeBold", nullptr));
         actionMakeItalic->setText(QCoreApplication::translate("MainWindow", "MakeItalic", nullptr));
         actionMakeUnderlined->setText(QCoreApplication::translate("MainWindow", "MakeUnderlined", nullptr));
+        actionIncreaseFontSize->setText(QCoreApplication::translate("MainWindow", "font+", nullptr));
+#if QT_CONFIG(shortcut)
+        actionIncreaseFontSize->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+=", nullptr));
+#endif // QT_CONFIG(shortcut)
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
+        menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
         toolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 

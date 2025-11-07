@@ -28,6 +28,8 @@ private slots:
     void setFontUnderlined(bool underlined);
     void setFontItalic (bool italic);
 
+    void increaseFontSize();
+
 private:
     Ui::MainWindow *ui;
     QString m_currentText;

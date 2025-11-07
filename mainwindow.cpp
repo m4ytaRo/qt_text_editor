@@ -19,6 +19,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect( ui->actionMakeUnderlined, &QAction::triggered, this, &MainWindow::setFontUnderlined);
     connect( ui->actionMakeItalic, &QAction::triggered, this, &MainWindow::setFontItalic);
 
+    connect( ui->actionIncreaseFontSize, &QAction::triggered, this, &MainWindow::increaseFontSize);
+
 }
 
 MainWindow::~MainWindow()
@@ -88,5 +90,15 @@ void MainWindow::setFontUnderlined(bool italic) {
 void MainWindow::setFontItalic(bool italic) {
 
 
+
+}
+
+void MainWindow::increaseFontSize() {
+
+    QTextEdit *editor = ui->textEdit;
+    QFont font = editor->currentFont();
+
+    font.setPointSize(font.pointSize() + 1);
+    editor->setFont(font);
 
 }
