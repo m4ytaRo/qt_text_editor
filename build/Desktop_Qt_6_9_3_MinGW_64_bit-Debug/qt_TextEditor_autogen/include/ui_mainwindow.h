@@ -85,6 +85,10 @@ public:
         textEdit = new QTextEdit(centralwidget);
         textEdit->setObjectName("textEdit");
         textEdit->setGeometry(QRect(10, 10, 771, 491));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Courier New")});
+        font.setPointSize(11);
+        textEdit->setFont(font);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
