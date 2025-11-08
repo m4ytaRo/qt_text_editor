@@ -10,6 +10,7 @@ D:/QT_PROJ/qt_TextEditor/mainwindow.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/q20type_traits.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/q20utility.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/q23utility.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qabstractitemmodel.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qalgorithms.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qanystringview.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qarraydata.h
@@ -51,11 +52,13 @@ D:/QT_PROJ/qt_TextEditor/mainwindow.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qhash.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qhashfunctions.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qiodevicebase.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qitemselectionmodel.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qiterable.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qiterator.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qlatin1stringview.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qline.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qlist.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qlocale.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qlogging.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qmalloc.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qmap.h
@@ -76,6 +79,7 @@ D:/QT_PROJ/qt_TextEditor/mainwindow.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qprocessordetection.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qrect.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qrefcount.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qregularexpression.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qscopedpointer.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qscopeguard.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtCore/qset.h
@@ -152,11 +156,27 @@ D:/QT_PROJ/qt_TextEditor/mainwindow.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtGui/qtguiexports.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtGui/qtguiglobal.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtGui/qtransform.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtGui/qvalidator.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtGui/qwindowdefs.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtGui/qwindowdefs_win.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/QListView
  mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/QMainWindow
+ mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/QSplitter
+ mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qabstractitemdelegate.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qabstractitemview.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qabstractscrollarea.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qabstractslider.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qabstractspinbox.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qframe.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qlistview.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qmainwindow.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qrubberband.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qsizepolicy.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qslider.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qsplitter.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qstyle.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qstyleoption.h
+ mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qtabbar.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qtabwidget.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qtwidgets-config.h
  mdp:E:/QT/6.9.3/mingw_64/include/QtWidgets/qtwidgetsexports.h

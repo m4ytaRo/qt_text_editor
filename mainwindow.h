@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QSplitter>
+#include <QListView>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -34,5 +36,11 @@ private:
     Ui::MainWindow *ui;
     QString m_currentText;
     QString m_currentFile;
+
+    QSplitter* mainSplitter;
+    QListView* listView;
+
+    void setupConnections ();
+    void setupUiCustom () ;
 };
 #endif // MAINWINDOW_H

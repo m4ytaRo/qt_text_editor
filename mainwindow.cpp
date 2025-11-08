@@ -2,13 +2,21 @@
 #include "./ui_mainwindow.h"
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QListView>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    setupUiCustom();
+    setupConnections();
 
+
+}
+
+void MainWindow::setupConnections () {
     connect( ui->actionNew, &QAction::triggered, this, &MainWindow::newFile);
     connect( ui->actionOpen, &QAction::triggered, this, &MainWindow::openFile);
     connect( ui->actionSave, &QAction::triggered, this, &MainWindow::saveFile);
@@ -20,7 +28,17 @@ MainWindow::MainWindow(QWidget *parent)
     connect( ui->actionMakeItalic, &QAction::triggered, this, &MainWindow::setFontItalic);
 
     connect( ui->actionIncreaseFontSize, &QAction::triggered, this, &MainWindow::increaseFontSize);
+}
 
+void MainWindow::setupUiCustom () {
+    mainSplitter = new QSplitter(Qt::Horizontal, this);
+
+    listView = new QListView;
+
+    mainSplitter->addWidget(listView);
+    mainSplitter->addWidget(ui->textEdit);
+
+    setCentralWidget(mainSplitter);
 }
 
 MainWindow::~MainWindow()
