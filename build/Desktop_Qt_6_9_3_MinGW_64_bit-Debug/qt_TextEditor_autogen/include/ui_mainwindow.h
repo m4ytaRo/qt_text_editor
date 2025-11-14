@@ -36,12 +36,15 @@ public:
     QAction *actionMakeItalic;
     QAction *actionMakeUnderlined;
     QAction *actionIncreaseFontSize;
+    QAction *actionNewNode;
+    QAction *actionDeleteNode;
     QWidget *centralwidget;
     QTextEdit *textEdit;
     QMenuBar *menubar;
     QMenu *menuFile;
     QMenu *menuEdit;
     QMenu *menuView;
+    QMenu *menuNode;
     QStatusBar *statusbar;
     QToolBar *toolBar;
 
@@ -84,11 +87,15 @@ public:
         actionMakeUnderlined->setMenuRole(QAction::MenuRole::NoRole);
         actionIncreaseFontSize = new QAction(MainWindow);
         actionIncreaseFontSize->setObjectName("actionIncreaseFontSize");
+        actionNewNode = new QAction(MainWindow);
+        actionNewNode->setObjectName("actionNewNode");
+        actionDeleteNode = new QAction(MainWindow);
+        actionDeleteNode->setObjectName("actionDeleteNode");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         textEdit = new QTextEdit(centralwidget);
         textEdit->setObjectName("textEdit");
-        textEdit->setGeometry(QRect(10, 10, 771, 491));
+        textEdit->setGeometry(QRect(20, 0, 761, 501));
         QFont font;
         font.setFamilies({QString::fromUtf8("Courier New")});
         font.setPointSize(11);
@@ -103,15 +110,24 @@ public:
         menuEdit->setObjectName("menuEdit");
         menuView = new QMenu(menubar);
         menuView->setObjectName("menuView");
+        menuNode = new QMenu(menubar);
+        menuNode->setObjectName("menuNode");
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
         MainWindow->setStatusBar(statusbar);
         toolBar = new QToolBar(MainWindow);
         toolBar->setObjectName("toolBar");
+        toolBar->setEnabled(true);
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(toolBar->sizePolicy().hasHeightForWidth());
+        toolBar->setSizePolicy(sizePolicy);
         MainWindow->addToolBar(Qt::ToolBarArea::TopToolBarArea, toolBar);
 
         menubar->addAction(menuFile->menuAction());
+        menubar->addAction(menuNode->menuAction());
         menubar->addAction(menuEdit->menuAction());
         menubar->addAction(menuView->menuAction());
         menuFile->addAction(actionNew);
@@ -121,6 +137,8 @@ public:
         menuEdit->addAction(actionUndo);
         menuEdit->addAction(actionRedo);
         menuView->addAction(actionIncreaseFontSize);
+        menuNode->addAction(actionNewNode);
+        menuNode->addAction(actionDeleteNode);
         toolBar->addAction(actionNew);
         toolBar->addAction(actionOpen);
         toolBar->addAction(actionSave);
@@ -150,9 +168,12 @@ public:
 #if QT_CONFIG(shortcut)
         actionIncreaseFontSize->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+=", nullptr));
 #endif // QT_CONFIG(shortcut)
+        actionNewNode->setText(QCoreApplication::translate("MainWindow", "New node", nullptr));
+        actionDeleteNode->setText(QCoreApplication::translate("MainWindow", "Delete node", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
+        menuNode->setTitle(QCoreApplication::translate("MainWindow", "Node", nullptr));
         toolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 

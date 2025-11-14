@@ -3,6 +3,8 @@
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QListView>
+#include <QTreeWidget>
+#include "addnodedialog.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -28,14 +30,50 @@ void MainWindow::setupConnections () {
     connect( ui->actionMakeItalic, &QAction::triggered, this, &MainWindow::setFontItalic);
 
     connect( ui->actionIncreaseFontSize, &QAction::triggered, this, &MainWindow::increaseFontSize);
+
+    connect( ui->actionNewNode, &QAction::triggered, this, [this]() {
+        AddNodeDialog dialog(this);
+        if (dialog.exec() == QDialog::Accepted) {
+            QTreeWidgetItem* current = mainTree->currentItem();
+            if (!current)
+                current = mainTree->invisibleRootItem();
+
+            QTreeWidgetItem* newItem = new QTreeWidgetItem(current);
+            newItem->setText(0, dialog.nodeName());
+            if (!dialog.iconPath().isEmpty())
+                newItem->setIcon(0, QIcon(dialog.iconPath()));
+
+            mainTree->expandItem(current);
+        }
+    });
+
+    connect (ui->actionDeleteNode, &QAction::triggered, this, &MainWindow::deleteNode);
 }
 
-void MainWindow::setupUiCustom () {
+void MainWindow::setupUiCustom() {
     mainSplitter = new QSplitter(Qt::Horizontal, this);
 
-    listView = new QListView;
+    mainTree = new QTreeWidget;
+    mainTree->setHeaderLabel("Files");
 
-    mainSplitter->addWidget(listView);
+    QTreeWidgetItem* notesRoot = new QTreeWidgetItem(mainTree);
+    notesRoot->setText(0, "Notes");
+
+    QTreeWidgetItem* testsRoot = new QTreeWidgetItem(mainTree);
+    testsRoot->setText(0, "Tests");
+
+    notesRoot->setFlags(notesRoot->flags() & ~Qt::ItemIsDragEnabled);
+    testsRoot->setFlags(testsRoot->flags() & ~(Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled));
+
+
+    mainTree->setDragEnabled(true);
+    mainTree->setAcceptDrops(true);
+    mainTree->setDropIndicatorShown(true);
+    mainTree->setDragDropMode(QAbstractItemView::InternalMove);
+
+    mainTree->expandAll();
+
+    mainSplitter->addWidget(mainTree);
     mainSplitter->addWidget(ui->textEdit);
 
     setCentralWidget(mainSplitter);
@@ -118,5 +156,23 @@ void MainWindow::increaseFontSize() {
 
     font.setPointSize(font.pointSize() + 1);
     editor->setFont(font);
+
+}
+
+void MainWindow::deleteNode() {
+
+    QTreeWidgetItem* item = mainTree->currentItem();
+    if (!item)
+        return;
+
+    QTreeWidgetItem* parent = item->parent();
+
+    if (parent) {
+        parent->removeChild(item);
+    }
+    else {
+        int index = mainTree->indexOfTopLevelItem(item);
+        mainTree->takeTopLevelItem(index);
+    }
 
 }

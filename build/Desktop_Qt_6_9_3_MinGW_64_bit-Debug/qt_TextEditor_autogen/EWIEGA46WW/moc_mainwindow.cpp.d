@@ -159,6 +159,7 @@ D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor
   E:/QT/6.9.3/mingw_64/include/QtWidgets/QListView \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/QMainWindow \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/QSplitter \
+  E:/QT/6.9.3/mingw_64/include/QtWidgets/QTreeWidget \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qabstractitemview.h \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qabstractscrollarea.h \
@@ -175,6 +176,9 @@ D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qstyleoption.h \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qtabbar.h \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qtabwidget.h \
+  E:/QT/6.9.3/mingw_64/include/QtWidgets/qtreeview.h \
+  E:/QT/6.9.3/mingw_64/include/QtWidgets/qtreewidget.h \
+  E:/QT/6.9.3/mingw_64/include/QtWidgets/qtreewidgetitemiterator.h \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \

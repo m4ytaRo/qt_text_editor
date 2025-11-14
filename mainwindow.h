@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QSplitter>
 #include <QListView>
+#include <QTreeWidget>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -32,12 +33,15 @@ private slots:
 
     void increaseFontSize();
 
+    void deleteNode();
+
 private:
     Ui::MainWindow *ui;
     QString m_currentText;
     QString m_currentFile;
 
     QSplitter* mainSplitter;
+    QTreeWidget* mainTree;
     QListView* listView;
 
     void setupConnections ();

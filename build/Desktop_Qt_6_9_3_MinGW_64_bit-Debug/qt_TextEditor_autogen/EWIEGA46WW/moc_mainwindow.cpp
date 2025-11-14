@@ -51,7 +51,8 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         "underlined",
         "setFontItalic",
         "italic",
-        "increaseFontSize"
+        "increaseFontSize",
+        "deleteNode"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -79,6 +80,8 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         }}),
         // Slot 'increaseFontSize'
         QtMocHelpers::SlotData<void()>(13, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'deleteNode'
+        QtMocHelpers::SlotData<void()>(14, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -111,6 +114,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 6: _t->setFontUnderlined((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
         case 7: _t->setFontItalic((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
         case 8: _t->increaseFontSize(); break;
+        case 9: _t->deleteNode(); break;
         default: ;
         }
     }
@@ -135,14 +139,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 9)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 10;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 9)
+        if (_id < 10)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 9;
+        _id -= 10;
     }
     return _id;
 }
