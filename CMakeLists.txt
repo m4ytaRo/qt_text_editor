@@ -23,6 +23,11 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(qt_TextEditor
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        addnodedialog.h addnodedialog.cpp
+        test.h test.cpp
+        question.h question.cpp
+        singlechoicequestion.h singlechoicequestion.cpp
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET qt_TextEditor APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

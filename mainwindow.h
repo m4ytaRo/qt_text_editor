@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QSplitter>
+#include <QListView>
+#include <QTreeWidget>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -14,10 +17,34 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+
+private slots:
+    void newFile ();
+    void openFile ();
+    void saveFile();
+    void saveFileAs();
+    void changeFont();
+    void setFontBold(bool bold);
+    void setFontUnderlined(bool underlined);
+    void setFontItalic (bool italic);
+
+    void increaseFontSize();
+
+    void deleteNode();
 
 private:
     Ui::MainWindow *ui;
+    QString m_currentText;
+    QString m_currentFile;
+
+    QSplitter* mainSplitter;
+    QTreeWidget* mainTree;
+    QListView* listView;
+
+    void setupConnections ();
+    void setupUiCustom () ;
 };
 #endif // MAINWINDOW_H
