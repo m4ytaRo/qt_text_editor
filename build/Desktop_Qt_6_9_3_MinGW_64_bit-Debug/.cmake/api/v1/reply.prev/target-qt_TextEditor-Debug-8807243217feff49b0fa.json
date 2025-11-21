@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 65,
+				"line" : 67,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 48,
+				"line" : 50,
 				"parent" : 0
 			},
 			{
@@ -381,7 +381,9 @@
 				2,
 				6,
 				8,
-				10
+				10,
+				12,
+				14
 			]
 		}
 	],
@@ -507,7 +509,9 @@
 				2,
 				6,
 				8,
-				10
+				10,
+				12,
+				14
 			]
 		},
 		{
@@ -518,7 +522,9 @@
 				5,
 				7,
 				9,
-				11
+				11,
+				13,
+				15
 			]
 		},
 		{
@@ -532,14 +538,14 @@
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				12
+				16
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				13
+				17
 			]
 		}
 	],
@@ -605,6 +611,28 @@
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
 			"path" : "question.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "singlechoicequestion.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "singlechoicequestion.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "mydelegate.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "mydelegate.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

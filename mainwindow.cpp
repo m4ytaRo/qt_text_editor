@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include <QListView>
 #include <QTreeWidget>
+
 #include "addnodedialog.h"
 
 
@@ -54,7 +55,8 @@ void MainWindow::setupUiCustom() {
     mainSplitter = new QSplitter(Qt::Horizontal, this);
 
     mainTree = new QTreeWidget;
-    mainTree->setHeaderLabel("Files");
+    //mainTree->setHeaderLabel("Files");
+    mainTree->setHeaderHidden(true);              // то же самое, но короче
 
     QTreeWidgetItem* notesRoot = new QTreeWidgetItem(mainTree);
     notesRoot->setText(0, "Notes");
@@ -72,6 +74,47 @@ void MainWindow::setupUiCustom() {
     mainTree->setDragDropMode(QAbstractItemView::InternalMove);
 
     mainTree->expandAll();
+    //mainTree->setItemDelegate(new MyDelegate(this));
+    mainTree->setStyleSheet(R"(
+    QTreeWidget {
+        background-color: #F5F5F5;
+        show-decoration-selected: 1;
+        selection-background-color: #5EBEFF;
+        selection-color: white;
+        outline: none;
+    }
+
+    QTreeWidget::item {
+        background-color: #FFFFFF;
+        border: 1px solid #DDDDDD;
+        color: black;
+    }
+
+    QTreeWidget::item:alternate {
+        background-color: #FAFAFA;
+        border: 1px solid #E5E5E5;
+    }
+
+    QTreeWidget::item:selected {
+        background-color: #5EBEFF;
+        border: 1px solid #5EBEFF;
+        color: white;
+    }
+
+    QTreeWidget::item:selected:!active {
+        background-color: #4A9AD9;
+        border: 1px solid #4A9AD9;
+        color: white;
+    }
+
+    QTreeWidget::branch:has-siblings:!adjoins-item {
+        border-image: none;
+        image: none;
+    }
+    QTreeWidget::branch:has-children:!has-siblings:closed,
+    QTreeWidget::branch:open:has-children:!has-siblings,
+)");
+
 
     mainSplitter->addWidget(mainTree);
     mainSplitter->addWidget(ui->textEdit);

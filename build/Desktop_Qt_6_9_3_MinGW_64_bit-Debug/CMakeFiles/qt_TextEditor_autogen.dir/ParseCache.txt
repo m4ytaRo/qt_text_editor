@@ -800,5 +800,7 @@ D:/QT_PROJ/qt_TextEditor/addnodedialog.h
  mdp:E:/QT/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
 D:/QT_PROJ/qt_TextEditor/singlechoicequestion.h
 D:/QT_PROJ/qt_TextEditor/question.cpp
+D:/QT_PROJ/qt_TextEditor/mydelegate.h
 D:/QT_PROJ/qt_TextEditor/singlechoicequestion.cpp
 D:/QT_PROJ/qt_TextEditor/test.cpp
+D:/QT_PROJ/qt_TextEditor/mydelegate.cpp
