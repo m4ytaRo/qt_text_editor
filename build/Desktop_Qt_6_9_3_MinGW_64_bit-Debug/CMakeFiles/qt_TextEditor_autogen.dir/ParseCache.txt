@@ -399,12 +399,12 @@ D:/QT_PROJ/qt_TextEditor/mainwindow.h
  mdp:E:/QT/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h
  mdp:E:/QT/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:E:/QT/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
-D:/QT_PROJ/qt_TextEditor/addnodedialog.cpp
 D:/QT_PROJ/qt_TextEditor/main.cpp
+D:/QT_PROJ/qt_TextEditor/addnodedialog.cpp
+D:/QT_PROJ/qt_TextEditor/test.h
+D:/QT_PROJ/qt_TextEditor/question.h
 D:/QT_PROJ/qt_TextEditor/mainwindow.cpp
  uic:./ui_mainwindow.h
-D:/QT_PROJ/qt_TextEditor/question.h
-D:/QT_PROJ/qt_TextEditor/test.h
 D:/QT_PROJ/qt_TextEditor/addnodedialog.h
  mmc:Q_OBJECT
  mdp:D:/QT_PROJ/qt_TextEditor/addnodedialog.h
@@ -799,8 +799,8 @@ D:/QT_PROJ/qt_TextEditor/addnodedialog.h
  mdp:E:/QT/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:E:/QT/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
 D:/QT_PROJ/qt_TextEditor/singlechoicequestion.h
-D:/QT_PROJ/qt_TextEditor/mydelegate.h
 D:/QT_PROJ/qt_TextEditor/question.cpp
+D:/QT_PROJ/qt_TextEditor/mydelegate.h
 D:/QT_PROJ/qt_TextEditor/singlechoicequestion.cpp
 D:/QT_PROJ/qt_TextEditor/test.cpp
 D:/QT_PROJ/qt_TextEditor/mydelegate.cpp

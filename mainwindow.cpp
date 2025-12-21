@@ -56,7 +56,7 @@ void MainWindow::setupUiCustom() {
 
     mainTree = new QTreeWidget;
     //mainTree->setHeaderLabel("Files");
-    mainTree->setHeaderHidden(true);              // то же самое, но короче
+    mainTree->setHeaderHidden(true);
 
     QTreeWidgetItem* notesRoot = new QTreeWidgetItem(mainTree);
     notesRoot->setText(0, "Notes");

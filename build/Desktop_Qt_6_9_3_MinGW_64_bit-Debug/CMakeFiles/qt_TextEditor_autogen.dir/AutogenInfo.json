@@ -353,6 +353,12 @@
 			null
 		],
 		[
+			"D:/QT_PROJ/qt_TextEditor/documentitem.h",
+			"MU",
+			"EWIEGA46WW/moc_documentitem.cpp",
+			null
+		],
+		[
 			"D:/QT_PROJ/qt_TextEditor/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -368,6 +374,12 @@
 			"D:/QT_PROJ/qt_TextEditor/singlechoicequestion.h",
 			"MU",
 			"EWIEGA46WW/moc_singlechoicequestion.cpp",
+			null
+		],
+		[
+			"D:/QT_PROJ/qt_TextEditor/systemfolderitem.h",
+			"MU",
+			"EWIEGA46WW/moc_systemfolderitem.cpp",
 			null
 		],
 		[
@@ -453,6 +465,7 @@
 		[ "D:/QT_PROJ/qt_TextEditor/mainwindow.cpp", "MU", null ],
 		[ "D:/QT_PROJ/qt_TextEditor/question.cpp", "MU", null ],
 		[ "D:/QT_PROJ/qt_TextEditor/singlechoicequestion.cpp", "MU", null ],
+		[ "D:/QT_PROJ/qt_TextEditor/systemfolderitem.cpp", "MU", null ],
 		[ "D:/QT_PROJ/qt_TextEditor/test.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
