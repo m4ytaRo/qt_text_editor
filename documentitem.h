@@ -2,6 +2,7 @@
 #define DOCUMENTITEM_H
 
 #include <QList>
+#include <QTreeWidgetItem>
 
 class DocumentItem
 {
@@ -25,9 +26,11 @@ public:
         return children;
     }
 
+
 private:
     DocumentItem* parent;
     QList<DocumentItem*> children;
+    QTreeWidgetItem* uiPointer;
 };
 
 #endif // DOCUMENTITEM_H

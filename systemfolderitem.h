@@ -6,14 +6,11 @@
 class SystemFolderItem : public DocumentItem
 {
 public:
-    SystemFolderItem();
+    SystemFolderItem(DocumentItem* parent);
 
-    bool isDeletable() const override {
-        return false;
-    }
-    DocumentItem::Type getType() const override {
-        return DocumentItem::Type::SystemFolder;
-    }
+    bool isDeletable() const override;
+    DocumentItem::Type getType() const override;
+
 };
 
 #endif // SYSTEMFOLDERITEM_H
