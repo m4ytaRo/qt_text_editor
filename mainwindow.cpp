@@ -119,6 +119,26 @@ void MainWindow::setupUiCustom() {
     mainSplitter->addWidget(mainTree);
     mainSplitter->addWidget(ui->textEdit);
 
+    ui->toolBar->setFixedHeight(22);
+    ui->toolBar->setIconSize(QSize(16, 16));
+    ui->toolBar->setMovable(false);
+
+    ui->menubar->setFixedHeight(22);
+    ui->menubar->setStyleSheet(
+        "QMenuBar {"
+        "    background-color: #DDDDDD;"
+        "    color: black;"
+        "       border-bottom: 1px solid #BFBFBF;"
+        "}"
+        "QMenuBar::item:selected {"
+        "    background: transparent;"
+        "    border: none;"
+        "}"
+        "QMenuBar::item:pressed {"
+        "    background-color: #BCBCBC;"
+        "}"
+        );
+
     setCentralWidget(mainSplitter);
 }
 
