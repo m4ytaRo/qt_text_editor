@@ -1,7 +1,8 @@
 #include "systemfolderitem.h"
 
-SystemFolderItem::SystemFolderItem(DocumentItem* parent) {
-
+SystemFolderItem::SystemFolderItem(DocumentItem* parent, QTreeWidgetItem* uiConnectedItem) {
+    setParent(parent);
+    setUIPointer(uiConnectedItem);
 }
 
 bool SystemFolderItem::isDeletable() const  {

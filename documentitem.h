@@ -26,6 +26,26 @@ public:
         return children;
     }
 
+    void deleteChildren () {
+        while (!children.isEmpty()) {
+            DocumentItem* child = children.takeLast();
+            child->deleteChildren();
+            delete child;
+        }
+    }
+
+    void setUIPointer (QTreeWidgetItem* ptr) {
+        uiPointer = ptr;
+    }
+
+    void setParent (DocumentItem* ptr) {
+        parent = ptr;
+    }
+
+    void addChild(DocumentItem* ptr) {
+        children.push_back(ptr);
+    }
+
 
 private:
     DocumentItem* parent;

@@ -29,6 +29,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         singlechoicequestion.h singlechoicequestion.cpp
         documentitem.h
         systemfolderitem.h systemfolderitem.cpp
+        project.h project.cpp
 
 
     )

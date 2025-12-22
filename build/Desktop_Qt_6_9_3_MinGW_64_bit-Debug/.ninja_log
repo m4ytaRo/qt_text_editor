@@ -1,14 +1,15 @@
 # ninja log v6
 412	2220	7843148155562694	CMakeFiles/qt_TextEditor.dir/addnodedialog.cpp.obj	cc361feb6fc1acae
-2011	2188	7880525198813299	qt_TextEditor.exe	40f250ca0dadbbbe
-6	97	7880525178769646	qt_TextEditor_autogen/timestamp	3b20336329c58638
-6	97	7880525178769646	qt_TextEditor_autogen/mocs_compilation.cpp	3b20336329c58638
+2615	3119	7881066423627173	qt_TextEditor.exe	32bda2113a852842
+10	147	7881066397558807	qt_TextEditor_autogen/timestamp	3b20336329c58638
+10	147	7881066397558807	qt_TextEditor_autogen/mocs_compilation.cpp	3b20336329c58638
 484	2093	7848370421256822	CMakeFiles/qt_TextEditor.dir/main.cpp.obj	27d93ef8841bd739
-6	97	7880525178769646	D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor_autogen/timestamp	3b20336329c58638
-6	97	7880525178769646	D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor_autogen/mocs_compilation.cpp	3b20336329c58638
+10	147	7881066397558807	D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor_autogen/timestamp	3b20336329c58638
+10	147	7881066397558807	D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor_autogen/mocs_compilation.cpp	3b20336329c58638
 482	2354	7848370421236889	CMakeFiles/qt_TextEditor.dir/qt_TextEditor_autogen/mocs_compilation.cpp.obj	9a54910adfc90fe5
-97	2011	7880525179677208	CMakeFiles/qt_TextEditor.dir/mainwindow.cpp.obj	d4b5d68260595578
+148	2615	7881066398947384	CMakeFiles/qt_TextEditor.dir/mainwindow.cpp.obj	d4b5d68260595578
 290	395	7848359659687861	CMakeFiles/qt_TextEditor.dir/question.cpp.obj	ab2a715ee4808c54
 356	1976	7848360266773143	CMakeFiles/qt_TextEditor.dir/test.cpp.obj	1ed010a7521b5272
 294	2043	7848359659727721	CMakeFiles/qt_TextEditor.dir/singlechoicequestion.cpp.obj	58ecbe8fd083aced
 103	1420	7854353507907299	CMakeFiles/qt_TextEditor.dir/mydelegate.cpp.obj	342e200804070888
+151	2122	7881066398977282	CMakeFiles/qt_TextEditor.dir/systemfolderitem.cpp.obj	6a86ec3e7061e0bb

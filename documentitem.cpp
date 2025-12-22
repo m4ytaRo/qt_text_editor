@@ -1,3 +1,5 @@
 #include "documentitem.h"
 
-DocumentItem::DocumentItem() {}
+DocumentItem::DocumentItem() {
+
+}

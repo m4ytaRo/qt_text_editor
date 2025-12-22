@@ -6,7 +6,7 @@
 class SystemFolderItem : public DocumentItem
 {
 public:
-    SystemFolderItem(DocumentItem* parent);
+    SystemFolderItem(DocumentItem* parent, QTreeWidgetItem* uiConnectedItem);
 
     bool isDeletable() const override;
     DocumentItem::Type getType() const override;
