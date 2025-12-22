@@ -3,10 +3,8 @@
 
 SystemFolderItem::SystemFolderItem(const QString& name,
                                    const QString& iconPath,
-                                   DocumentItem* parent,
-                                   QTreeWidgetItem* uiConnectedItem) : DocumentItem(name, iconPath) {
-    setParent(parent);
-    setUIPointer(uiConnectedItem);
+                                   size_t index) : DocumentItem(name, iconPath, index) {
+
 }
 
 bool SystemFolderItem::isDeletable() const  {

@@ -8,13 +8,11 @@ class DocumentItem
 {
 public:
     enum Type {
-        Note,
-        Test,
         SystemFolder,
         Root
     };
-    DocumentItem(const QString& name, const QString& iconPath);
-    virtual ~DocumentItem () = default;
+    DocumentItem(const QString& name, const QString& iconPath, size_t index);
+    virtual ~DocumentItem ();
     virtual bool isDeletable () const = 0;
     virtual DocumentItem::Type getType () const = 0;
 
@@ -70,6 +68,8 @@ private:
 
     QString name;
     QString iconPath;
+
+    size_t itemIndex;
 };
 
 #endif // DOCUMENTITEM_H

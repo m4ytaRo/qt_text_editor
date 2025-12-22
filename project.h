@@ -11,7 +11,7 @@ public:
     Project();
     ~Project();
 
-    DocumentItem* projectRoot() const;
+    DocumentItem* getRoot() const;
 
     DocumentItem* createItem (DocumentItem::Type type,
                              const QString& name,
@@ -21,6 +21,7 @@ public:
 
 private:
     DocumentItem* root;
+    size_t itemCount = 0;
 };
 
 #endif // PROJECT_H

@@ -2,7 +2,8 @@
 
 
 RootItem::RootItem( const QString& name,
-                    const QString& iconPath) : DocumentItem(name, iconPath) {
+                    const QString& iconPath,
+                   size_t index) : DocumentItem(name, iconPath, index) {
 
 }
 

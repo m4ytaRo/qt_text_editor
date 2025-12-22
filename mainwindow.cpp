@@ -6,6 +6,7 @@
 #include <QTreeWidget>
 
 #include "addnodedialog.h"
+#include "documentitem.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -13,10 +14,11 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    currentProject = new Project();
+
     setupUiCustom();
     setupConnections();
-
-
 }
 
 void MainWindow::setupConnections () {
@@ -58,11 +60,19 @@ void MainWindow::setupUiCustom() {
     //mainTree->setHeaderLabel("Files");
     mainTree->setHeaderHidden(true);
 
+    DocumentItem* notesItem = currentProject->createItem(DocumentItem::SystemFolder, "Notes", "");
+    DocumentItem* testsItem = currentProject->createItem(DocumentItem::SystemFolder, "Tests", "");
+
+    currentProject->addItem(currentProject->getRoot(), notesItem);
+    currentProject->addItem(currentProject->getRoot(), testsItem);
+
     QTreeWidgetItem* notesRoot = new QTreeWidgetItem(mainTree);
-    notesRoot->setText(0, "Notes");
+    notesItem->connectUIPointer(notesRoot);
+    notesItem->syncWithUI();
 
     QTreeWidgetItem* testsRoot = new QTreeWidgetItem(mainTree);
-    testsRoot->setText(0, "Tests");
+    testsItem->connectUIPointer(testsRoot);
+    testsItem->syncWithUI();
 
     notesRoot->setFlags(notesRoot->flags() & ~Qt::ItemIsDragEnabled);
     testsRoot->setFlags(testsRoot->flags() & ~(Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled));
@@ -144,6 +154,7 @@ void MainWindow::setupUiCustom() {
 
 MainWindow::~MainWindow()
 {
+    delete currentProject;
     delete ui;
 }
 

@@ -7,7 +7,8 @@ class RootItem : public DocumentItem
 {
 public:
     RootItem(const QString& name,
-                     const QString& iconPath);
+                     const QString& iconPath,
+                        size_t index);
 
     bool isDeletable() const override;
     DocumentItem::Type getType() const override;

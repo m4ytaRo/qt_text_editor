@@ -1,10 +1,16 @@
 #include "project.h"
 
 Project::Project() {
-    root = new RootItem("SystemRoot", "");
+    root = new RootItem("SystemRoot", "", itemCount++);
 }
 
-DocumentItem* Project::projectRoot() const {}
+Project::~Project () {
+    delete root;
+}
+
+DocumentItem* Project::getRoot() const {
+    return root;
+}
 
 DocumentItem* Project::createItem (DocumentItem::Type type,
                          const QString& name,
@@ -12,12 +18,11 @@ DocumentItem* Project::createItem (DocumentItem::Type type,
     DocumentItem* item = nullptr;
     switch (type) {
     case DocumentItem::Type::SystemFolder:
-        item = new SystemFolderItem(name, iconPath);
-    case DocumentItem::Type::Note:
-        //item = new NoteItem();
-    case DocumentItem::Type::Test:
-        //item = new TestItem();
-    };
+        item = new SystemFolderItem(name, iconPath, itemCount++);
+    case DocumentItem::Type::Root:
+        item = new RootItem(name, iconPath, itemCount++);
+    }
+
 
 
     return item;
