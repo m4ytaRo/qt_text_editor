@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-f7e30fb666fc717dee1c.json",
+					"jsonFile" : "directory-.-Debug-4311d976b4138d59e288.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "qt_TextEditor::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-qt_TextEditor-Debug-773c5c1a68c58c686963.json",
+					"jsonFile" : "target-qt_TextEditor-Debug-c569ada2a9fe1c13df65.json",
 					"name" : "qt_TextEditor",
 					"projectIndex" : 0
 				},

@@ -1,6 +1,10 @@
 #include "systemfolderitem.h"
 
-SystemFolderItem::SystemFolderItem(DocumentItem* parent, QTreeWidgetItem* uiConnectedItem) {
+
+SystemFolderItem::SystemFolderItem(const QString& name,
+                                   const QString& iconPath,
+                                   DocumentItem* parent,
+                                   QTreeWidgetItem* uiConnectedItem) : DocumentItem(name, iconPath) {
     setParent(parent);
     setUIPointer(uiConnectedItem);
 }

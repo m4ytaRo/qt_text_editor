@@ -1,12 +1,12 @@
-#ifndef SYSTEMFOLDERITEM_H
-#define SYSTEMFOLDERITEM_H
+#ifndef ROOTITEM_H
+#define ROOTITEM_H
 
 #include "documentitem.h"
 
-class SystemFolderItem : public DocumentItem
+class RootItem : public DocumentItem
 {
 public:
-    SystemFolderItem(const QString& name,
+    RootItem(const QString& name,
                      const QString& iconPath);
 
     bool isDeletable() const override;
@@ -14,4 +14,5 @@ public:
 
 };
 
-#endif // SYSTEMFOLDERITEM_H
+
+#endif // ROOTITEM_H

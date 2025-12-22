@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 70,
+				"line" : 73,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 53,
+				"line" : 56,
 				"parent" : 0
 			},
 			{
@@ -383,18 +383,21 @@
 				8,
 				10,
 				12,
-				15
+				15,
+				17,
+				18,
+				20
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"id" : "qt_TextEditor_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "qt_TextEditor_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "qt_TextEditor_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "qt_TextEditor::@6890427a1f51a3e7e1df",
@@ -511,7 +514,10 @@
 				8,
 				10,
 				12,
-				15
+				15,
+				17,
+				18,
+				20
 			]
 		},
 		{
@@ -525,7 +531,9 @@
 				11,
 				13,
 				14,
-				16
+				16,
+				19,
+				21
 			]
 		},
 		{
@@ -539,14 +547,14 @@
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				17
+				22
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				18
+				23
 			]
 		}
 	],
@@ -639,6 +647,34 @@
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
 			"path" : "systemfolderitem.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "project.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "project.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "documentitem.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "rootitem.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "rootitem.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

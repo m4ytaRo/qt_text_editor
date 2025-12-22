@@ -6,6 +6,8 @@
 #include <QListView>
 #include <QTreeWidget>
 
+#include "Project.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -43,6 +45,8 @@ private:
     QSplitter* mainSplitter;
     QTreeWidget* mainTree;
     QListView* listView;
+
+    Project* currentProject;
 
     void setupConnections ();
     void setupUiCustom () ;

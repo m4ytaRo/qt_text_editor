@@ -30,6 +30,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         documentitem.h
         systemfolderitem.h systemfolderitem.cpp
         project.h project.cpp
+        documentitem.cpp
+        rootitem.h rootitem.cpp
 
 
     )

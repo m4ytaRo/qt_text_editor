@@ -10,8 +10,10 @@ public:
     enum Type {
         Note,
         Test,
-        SystemFolder
+        SystemFolder,
+        Root
     };
+    DocumentItem(const QString& name, const QString& iconPath);
     virtual ~DocumentItem () = default;
     virtual bool isDeletable () const = 0;
     virtual DocumentItem::Type getType () const = 0;
@@ -34,8 +36,12 @@ public:
         }
     }
 
-    void setUIPointer (QTreeWidgetItem* ptr) {
+    void connectUIPointer (QTreeWidgetItem* ptr) {
         uiPointer = ptr;
+    }
+
+    QTreeWidgetItem* getUIPointer () const {
+        return uiPointer;
     }
 
     void setParent (DocumentItem* ptr) {
@@ -46,11 +52,24 @@ public:
         children.push_back(ptr);
     }
 
+    QString getName () const {
+        return name;
+    }
+
+    QString getIconPath () const {
+        return iconPath;
+    }
+
+    void syncWithUI () const;
+
 
 private:
     DocumentItem* parent;
     QList<DocumentItem*> children;
     QTreeWidgetItem* uiPointer;
+
+    QString name;
+    QString iconPath;
 };
 
 #endif // DOCUMENTITEM_H
