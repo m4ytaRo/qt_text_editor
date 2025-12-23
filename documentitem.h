@@ -4,12 +4,17 @@
 #include <QList>
 #include <QTreeWidgetItem>
 
+
 class DocumentItem
 {
 public:
     enum Type {
         SystemFolder,
         Root
+    };
+    enum class State : uint32_t {
+        Visible = 0,
+        HideChildrenWhenInvisible = 1 << 0
     };
     DocumentItem(const QString& name, const QString& iconPath, size_t index);
     virtual ~DocumentItem ();
@@ -26,13 +31,7 @@ public:
         return children;
     }
 
-    void deleteChildren () {
-        while (!children.isEmpty()) {
-            DocumentItem* child = children.takeLast();
-            child->deleteChildren();
-            delete child;
-        }
-    }
+    void deleteChildren ();
 
     void connectUIPointer (QTreeWidgetItem* ptr) {
         uiPointer = ptr;
@@ -60,6 +59,14 @@ public:
 
     void syncWithUI () const;
 
+    bool isVisible () const {
+        return getState(State::Visible);
+    }
+    void setVisibility(bool vis) {
+        setState(State::Visible, vis);
+    }
+
+
 
 private:
     DocumentItem* parent;
@@ -70,6 +77,11 @@ private:
     QString iconPath;
 
     size_t itemIndex;
+    uint32_t stateMask;
+
+    void setState(State state, bool value);
+    bool getState(State state) const;
+
 };
 
 #endif // DOCUMENTITEM_H

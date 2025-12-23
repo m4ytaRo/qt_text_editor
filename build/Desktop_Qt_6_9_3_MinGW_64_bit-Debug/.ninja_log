@@ -55,3 +55,15 @@
 5	89	7881229578200895	D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor_autogen/mocs_compilation.cpp	3b20336329c58638
 90	1946	7881229579051058	CMakeFiles/qt_TextEditor.dir/mainwindow.cpp.obj	d4b5d68260595578
 1946	2152	7881229597617256	qt_TextEditor.exe	f370eb7c63432ed2
+43	496	7881973158998169	qt_TextEditor_autogen/timestamp	3b20336329c58638
+43	496	7881973158998169	qt_TextEditor_autogen/mocs_compilation.cpp	3b20336329c58638
+43	496	7881973158998169	D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor_autogen/timestamp	3b20336329c58638
+43	496	7881973158998169	D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor_autogen/mocs_compilation.cpp	3b20336329c58638
+501	2245	7881973159518441	CMakeFiles/qt_TextEditor.dir/systemfolderitem.cpp.obj	6a86ec3e7061e0bb
+507	2251	7881973159568276	CMakeFiles/qt_TextEditor.dir/rootitem.cpp.obj	cbd3a038ba03a749
+498	2258	7881973159478574	CMakeFiles/qt_TextEditor.dir/main.cpp.obj	27d93ef8841bd739
+503	2265	7881973159528408	CMakeFiles/qt_TextEditor.dir/project.cpp.obj	352d6741d272b01b
+505	2305	7881973159548342	CMakeFiles/qt_TextEditor.dir/documentitem.cpp.obj	6e8e0dcc4807aabb
+496	2546	7881973159458640	CMakeFiles/qt_TextEditor.dir/qt_TextEditor_autogen/mocs_compilation.cpp.obj	9a54910adfc90fe5
+500	2748	7881973159498510	CMakeFiles/qt_TextEditor.dir/mainwindow.cpp.obj	d4b5d68260595578
+2748	3309	7881973181975772	qt_TextEditor.exe	f370eb7c63432ed2

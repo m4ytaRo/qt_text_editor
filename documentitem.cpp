@@ -15,3 +15,22 @@ void DocumentItem::syncWithUI() const {
 
     item->setText(0, getName());
 }
+
+void DocumentItem::deleteChildren () {
+    while (!children.isEmpty()) {
+        DocumentItem* child = children.takeLast();
+        child->deleteChildren();
+        delete child;
+    }
+}
+
+void DocumentItem::setState(State state, bool value) {
+    if (value)
+        stateMask |= static_cast<uint32_t> (state);
+    else
+        stateMask &= ~static_cast<uint32_t> (state);
+}
+
+bool DocumentItem::getState(State state) const {
+    return (static_cast<uint32_t>(state) & stateMask) != 0;
+}
