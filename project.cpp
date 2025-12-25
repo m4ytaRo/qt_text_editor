@@ -2,6 +2,8 @@
 
 Project::Project() {
     root = new RootItem("SystemRoot", "", itemCount++);
+    addItem(nullptr, root);
+
 }
 
 Project::~Project () {
@@ -29,6 +31,7 @@ DocumentItem* Project::createItem (DocumentItem::Type type,
 }
 
 void Project::addItem (DocumentItem* parent, DocumentItem* item) {
-    parent->addChild(item);
+    if (parent != nullptr)
+        parent->addChild(item);
     item->setParent(parent);
 }

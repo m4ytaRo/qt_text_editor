@@ -4,7 +4,6 @@
 #include <QList>
 #include <QTreeWidgetItem>
 
-
 class DocumentItem
 {
 public:
@@ -14,7 +13,7 @@ public:
     };
     enum class State : uint32_t {
         Visible = 0,
-        HideChildrenWhenInvisible = 1 << 0
+        Locked = 1 << 0
     };
     DocumentItem(const QString& name, const QString& iconPath, size_t index);
     virtual ~DocumentItem ();
@@ -66,10 +65,12 @@ public:
         setState(State::Visible, vis);
     }
 
+    QString getHeirarchy() const;
+
 
 
 private:
-    DocumentItem* parent;
+    DocumentItem* parent = nullptr;
     QList<DocumentItem*> children;
     QTreeWidgetItem* uiPointer;
 
@@ -83,5 +84,8 @@ private:
     bool getState(State state) const;
 
 };
+
+//Q_DECLARE_METATYPE(DocumentItem*); // weirdo
+Q_DECLARE_OPAQUE_POINTER(DocumentItem*)
 
 #endif // DOCUMENTITEM_H

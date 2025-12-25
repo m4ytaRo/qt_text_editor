@@ -32,6 +32,7 @@ private slots:
     void setFontBold(bool bold);
     void setFontUnderlined(bool underlined);
     void setFontItalic (bool italic);
+    void onItemClicked (QTreeWidgetItem* item, int column);
 
     void increaseFontSize();
 

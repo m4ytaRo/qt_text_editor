@@ -13,12 +13,14 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    qRegisterMetaType<DocumentItem*>("DocumentItem*"); // weirdo
     ui->setupUi(this);
 
     currentProject = new Project();
 
     setupUiCustom();
     setupConnections();
+
 }
 
 void MainWindow::setupConnections () {
@@ -51,9 +53,15 @@ void MainWindow::setupConnections () {
     });
 
     connect (ui->actionDeleteNode, &QAction::triggered, this, &MainWindow::deleteNode);
+
+
+    connect(mainTree, &QTreeWidget::itemClicked, this, &MainWindow::onItemClicked);
 }
 
 void MainWindow::setupUiCustom() {
+
+
+
     mainSplitter = new QSplitter(Qt::Horizontal, this);
 
     mainTree = new QTreeWidget;
@@ -248,5 +256,14 @@ void MainWindow::deleteNode() {
         int index = mainTree->indexOfTopLevelItem(item);
         mainTree->takeTopLevelItem(index);
     }
+
+}
+
+void MainWindow::onItemClicked (QTreeWidgetItem* item, int column) {
+    auto* doc = item->data(0, Qt::UserRole + 1).value<DocumentItem*>(); //returning nullptr for some reason
+    QString hier = "";
+    if (doc != nullptr)
+        hier= doc->getHeirarchy();
+    ui->statusbar->showMessage(hier, 3000);
 
 }
