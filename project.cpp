@@ -1,10 +1,7 @@
 #include "project.h"
 
-Project::Project() {
-    root = new RootItem("SystemRoot", "", itemCount++);
-    addItem(nullptr, root);
 
-}
+
 
 Project::~Project () {
     delete root;
@@ -35,3 +32,15 @@ void Project::addItem (DocumentItem* parent, DocumentItem* item) {
         parent->addChild(item);
     item->setParent(parent);
 }
+
+void Project::setCurrentItem(DocumentItem* item) {
+    if (currentItemOpened != nullptr) {
+        currentItemOpened->setContent(currentContent);
+    }
+    qDebug() << currentContent;
+    currentItemOpened = item;
+
+    setCurrentContent(currentItemOpened->getContent());
+}
+
+

@@ -5,8 +5,10 @@
 #include <QSplitter>
 #include <QListView>
 #include <QTreeWidget>
+#include <QLabel>
 
 #include "Project.h"
+#include "ui_mainwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -21,6 +23,12 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+    QString getTextEditContent () const {
+        if (!ui)
+            return ui->textEdit->toPlainText();
+        return nullptr;
+    }
 
 
 private slots:
@@ -40,16 +48,19 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QString m_currentText;
+
     QString m_currentFile;
 
     QSplitter* mainSplitter;
     QTreeWidget* mainTree;
     QListView* listView;
 
+    QLabel *statusLabel = nullptr;
+
     Project* currentProject;
 
     void setupConnections ();
     void setupUiCustom () ;
+
 };
 #endif // MAINWINDOW_H

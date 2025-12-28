@@ -16,7 +16,8 @@ MainWindow::MainWindow(QWidget *parent)
     qRegisterMetaType<DocumentItem*>("DocumentItem*"); // weirdo
     ui->setupUi(this);
 
-    currentProject = new Project();
+    currentProject = new Project(this);
+
 
     setupUiCustom();
     setupConnections();
@@ -73,6 +74,10 @@ void MainWindow::setupUiCustom() {
 
     mainSplitter = new QSplitter(Qt::Horizontal, this);
 
+    statusLabel = new QLabel("", this);
+    statusLabel->setMinimumWidth(200);
+    ui->statusbar->addWidget(statusLabel);
+
     mainTree = new QTreeWidget;
     //mainTree->setHeaderLabel("Files");
     mainTree->setHeaderHidden(true);
@@ -86,6 +91,7 @@ void MainWindow::setupUiCustom() {
     QTreeWidgetItem* notesRoot = new QTreeWidgetItem(mainTree);
     notesItem->connectUIPointer(notesRoot);
     notesItem->syncWithUI();
+    currentProject->setCurrentItem(notesItem);
 
     QTreeWidgetItem* testsRoot = new QTreeWidgetItem(mainTree);
     testsItem->connectUIPointer(testsRoot);
@@ -177,7 +183,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::newFile() {
 
-    m_currentText.clear();
+    //currentContent.clear();
     ui->textEdit->setText(QString());
 
 }
@@ -269,10 +275,16 @@ void MainWindow::deleteNode() {
 }
 
 void MainWindow::onItemClicked (QTreeWidgetItem* item, int column) {
-    auto* doc = item->data(0, DOCUMENT_ROLE).value<DocumentItem*>(); //returning nullptr for some reason
+    auto* doc = item->data(0, DOCUMENT_ROLE).value<DocumentItem*>(); // we get DocumentItem* for gui tree item we clicked
+
+
     QString hier = "";
     if (doc != nullptr)
         hier= doc->getHeirarchy();
-    ui->statusbar->showMessage(hier, 3000);
+    statusLabel->setText(hier);
+
+    QString localContent = ui->textEdit->toPlainText();
+    currentProject->setCurrentItem(doc);
+    ui->textEdit->setText(currentProject->getCurrentContent());
 
 }

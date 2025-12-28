@@ -53,6 +53,7 @@ D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor
   E:/QT/6.9.3/mingw_64/include/QtCore/qglobalstatic.h \
   E:/QT/6.9.3/mingw_64/include/QtCore/qhash.h \
   E:/QT/6.9.3/mingw_64/include/QtCore/qhashfunctions.h \
+  E:/QT/6.9.3/mingw_64/include/QtCore/qiodevice.h \
   E:/QT/6.9.3/mingw_64/include/QtCore/qiodevicebase.h \
   E:/QT/6.9.3/mingw_64/include/QtCore/qitemselectionmodel.h \
   E:/QT/6.9.3/mingw_64/include/QtCore/qiterable.h \
@@ -128,6 +129,7 @@ D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor
   E:/QT/6.9.3/mingw_64/include/QtCore/qtversionchecks.h \
   E:/QT/6.9.3/mingw_64/include/QtCore/qtypeinfo.h \
   E:/QT/6.9.3/mingw_64/include/QtCore/qtypes.h \
+  E:/QT/6.9.3/mingw_64/include/QtCore/qurl.h \
   E:/QT/6.9.3/mingw_64/include/QtCore/qutf8stringview.h \
   E:/QT/6.9.3/mingw_64/include/QtCore/qvariant.h \
   E:/QT/6.9.3/mingw_64/include/QtCore/qvarlengtharray.h \
@@ -148,12 +150,14 @@ D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor
   E:/QT/6.9.3/mingw_64/include/QtGui/qkeysequence.h \
   E:/QT/6.9.3/mingw_64/include/QtGui/qpaintdevice.h \
   E:/QT/6.9.3/mingw_64/include/QtGui/qpalette.h \
+  E:/QT/6.9.3/mingw_64/include/QtGui/qpicture.h \
   E:/QT/6.9.3/mingw_64/include/QtGui/qpixelformat.h \
   E:/QT/6.9.3/mingw_64/include/QtGui/qpixmap.h \
   E:/QT/6.9.3/mingw_64/include/QtGui/qpolygon.h \
   E:/QT/6.9.3/mingw_64/include/QtGui/qregion.h \
   E:/QT/6.9.3/mingw_64/include/QtGui/qrgb.h \
   E:/QT/6.9.3/mingw_64/include/QtGui/qrgba64.h \
+  E:/QT/6.9.3/mingw_64/include/QtGui/qtextdocument.h \
   E:/QT/6.9.3/mingw_64/include/QtGui/qtgui-config.h \
   E:/QT/6.9.3/mingw_64/include/QtGui/qtguiexports.h \
   E:/QT/6.9.3/mingw_64/include/QtGui/qtguiglobal.h \
@@ -161,6 +165,7 @@ D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor
   E:/QT/6.9.3/mingw_64/include/QtGui/qvalidator.h \
   E:/QT/6.9.3/mingw_64/include/QtGui/qwindowdefs.h \
   E:/QT/6.9.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+  E:/QT/6.9.3/mingw_64/include/QtWidgets/QLabel \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/QListView \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/QMainWindow \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/QSplitter \
@@ -172,6 +177,7 @@ D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qabstractslider.h \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qabstractspinbox.h \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qframe.h \
+  E:/QT/6.9.3/mingw_64/include/QtWidgets/qlabel.h \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qlistview.h \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qmainwindow.h \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qrubberband.h \

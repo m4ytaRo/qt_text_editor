@@ -58,6 +58,14 @@ public:
         return iconPath;
     }
 
+    void setContent (QString content) {
+        this->content = content;
+    }
+
+    QString getContent () const {
+        return content;
+    }
+
     void syncWithUI ();
 
     bool isVisible () const {
@@ -78,6 +86,7 @@ private:
 
     QString name;
     QString iconPath;
+    QString content;
 
     size_t itemIndex;
     uint32_t stateMask;
