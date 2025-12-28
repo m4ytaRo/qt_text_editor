@@ -4,6 +4,8 @@
 #include <QList>
 #include <QTreeWidgetItem>
 
+constexpr int DOCUMENT_ROLE = Qt::UserRole + 1;
+
 class DocumentItem
 {
 public:
@@ -56,7 +58,7 @@ public:
         return iconPath;
     }
 
-    void syncWithUI () const;
+    void syncWithUI ();
 
     bool isVisible () const {
         return getState(State::Visible);

@@ -10,21 +10,16 @@ DocumentItem::DocumentItem(const QString& name, const QString& iconPath, size_t 
     setState(State::Locked, false);
 
 
-    QVariant v = QVariant::fromValue(this);
-    qDebug() << "isValid:" << v.isValid();
-    qDebug() << "canConvert<DocumentItem*>:" << v.canConvert<DocumentItem*>();
-
-    DocumentItem* ptr = v.value<DocumentItem*>();
-    qDebug() << "ptr:" << ptr << "this:" << this;
 }
 
 DocumentItem::~DocumentItem () {
     deleteChildren();
 }
 
-void DocumentItem::syncWithUI() const {
+void DocumentItem::syncWithUI()  {
     QTreeWidgetItem* item = this->getUIPointer();
-    item->setData(0, Qt::UserRole + 1, QVariant::fromValue(this)); // maybe Qt::UserRole not Qt::UserRole + 1
+    item->setData(0, DOCUMENT_ROLE, QVariant::fromValue(this)); // maybe Qt::UserRole not Qt::UserRole + 1
+    //auto* doc = item->data(0, DOCUMENT_ROLE).value<DocumentItem*>();
 
     item->setText(0, getName());
 }

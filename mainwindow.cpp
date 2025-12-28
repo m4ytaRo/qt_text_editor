@@ -43,10 +43,19 @@ void MainWindow::setupConnections () {
             if (!current)
                 current = mainTree->invisibleRootItem();
 
-            QTreeWidgetItem* newItem = new QTreeWidgetItem(current);
-            newItem->setText(0, dialog.nodeName());
-            if (!dialog.iconPath().isEmpty())
-                newItem->setIcon(0, QIcon(dialog.iconPath()));
+            DocumentItem* newItem = currentProject->createItem(DocumentItem::SystemFolder, dialog.nodeName(), dialog.iconPath());
+            QTreeWidgetItem* newTreeItem = new QTreeWidgetItem(current);
+
+            auto* docPtr = current->data(0, DOCUMENT_ROLE).value<DocumentItem*>();
+            newItem->setParent(docPtr);
+            docPtr->addChild(newItem);
+
+            newItem->connectUIPointer(newTreeItem);
+            newItem->syncWithUI();
+
+            //newItem->set Text(0, dialog.nodeName());
+            //if (!dialog.iconPath().isEmpty())
+            //    newItem->setIcon(0, QIcon(dialog.iconPath()));
 
             mainTree->expandItem(current);
         }
@@ -260,7 +269,7 @@ void MainWindow::deleteNode() {
 }
 
 void MainWindow::onItemClicked (QTreeWidgetItem* item, int column) {
-    auto* doc = item->data(0, Qt::UserRole + 1).value<DocumentItem*>(); //returning nullptr for some reason
+    auto* doc = item->data(0, DOCUMENT_ROLE).value<DocumentItem*>(); //returning nullptr for some reason
     QString hier = "";
     if (doc != nullptr)
         hier= doc->getHeirarchy();
