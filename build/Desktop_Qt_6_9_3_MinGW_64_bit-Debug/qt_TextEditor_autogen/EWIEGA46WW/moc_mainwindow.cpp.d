@@ -1,5 +1,10 @@
 D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/QT_PROJ/qt_TextEditor/mainwindow.h \
   D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor_autogen/moc_predefs.h \
+  D:/QT_PROJ/qt_TextEditor/Project.h \
+  D:/QT_PROJ/qt_TextEditor/documentitem.h \
+  D:/QT_PROJ/qt_TextEditor/rootitem.h \
+  D:/QT_PROJ/qt_TextEditor/systemfolderitem.h \
+  E:/QT/6.9.3/mingw_64/include/QtCore/QList \
   E:/QT/6.9.3/mingw_64/include/QtCore/q17memory.h \
   E:/QT/6.9.3/mingw_64/include/QtCore/q20functional.h \
   E:/QT/6.9.3/mingw_64/include/QtCore/q20iterator.h \
@@ -160,6 +165,7 @@ D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor
   E:/QT/6.9.3/mingw_64/include/QtWidgets/QMainWindow \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/QSplitter \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/QTreeWidget \
+  E:/QT/6.9.3/mingw_64/include/QtWidgets/QTreeWidgetItem \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qabstractitemview.h \
   E:/QT/6.9.3/mingw_64/include/QtWidgets/qabstractscrollarea.h \

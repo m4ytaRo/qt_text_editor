@@ -6,16 +6,20 @@
 #include <QTreeWidget>
 
 #include "addnodedialog.h"
+#include "documentitem.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    qRegisterMetaType<DocumentItem*>("DocumentItem*"); // weirdo
     ui->setupUi(this);
+
+    currentProject = new Project();
+
     setupUiCustom();
     setupConnections();
-
 
 }
 
@@ -49,20 +53,34 @@ void MainWindow::setupConnections () {
     });
 
     connect (ui->actionDeleteNode, &QAction::triggered, this, &MainWindow::deleteNode);
+
+
+    connect(mainTree, &QTreeWidget::itemClicked, this, &MainWindow::onItemClicked);
 }
 
 void MainWindow::setupUiCustom() {
+
+
+
     mainSplitter = new QSplitter(Qt::Horizontal, this);
 
     mainTree = new QTreeWidget;
     //mainTree->setHeaderLabel("Files");
-    mainTree->setHeaderHidden(true);              // то же самое, но короче
+    mainTree->setHeaderHidden(true);
+
+    DocumentItem* notesItem = currentProject->createItem(DocumentItem::SystemFolder, "Notes", "");
+    DocumentItem* testsItem = currentProject->createItem(DocumentItem::SystemFolder, "Tests", "");
+
+    currentProject->addItem(currentProject->getRoot(), notesItem);
+    currentProject->addItem(currentProject->getRoot(), testsItem);
 
     QTreeWidgetItem* notesRoot = new QTreeWidgetItem(mainTree);
-    notesRoot->setText(0, "Notes");
+    notesItem->connectUIPointer(notesRoot);
+    notesItem->syncWithUI();
 
     QTreeWidgetItem* testsRoot = new QTreeWidgetItem(mainTree);
-    testsRoot->setText(0, "Tests");
+    testsItem->connectUIPointer(testsRoot);
+    testsItem->syncWithUI();
 
     notesRoot->setFlags(notesRoot->flags() & ~Qt::ItemIsDragEnabled);
     testsRoot->setFlags(testsRoot->flags() & ~(Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled));
@@ -119,11 +137,32 @@ void MainWindow::setupUiCustom() {
     mainSplitter->addWidget(mainTree);
     mainSplitter->addWidget(ui->textEdit);
 
+    ui->toolBar->setFixedHeight(22);
+    ui->toolBar->setIconSize(QSize(16, 16));
+    ui->toolBar->setMovable(false);
+
+    ui->menubar->setFixedHeight(22);
+    ui->menubar->setStyleSheet(
+        "QMenuBar {"
+        "    background-color: #DDDDDD;"
+        "    color: black;"
+        "       border-bottom: 1px solid #BFBFBF;"
+        "}"
+        "QMenuBar::item:selected {"
+        "    background: transparent;"
+        "    border: none;"
+        "}"
+        "QMenuBar::item:pressed {"
+        "    background-color: #BCBCBC;"
+        "}"
+        );
+
     setCentralWidget(mainSplitter);
 }
 
 MainWindow::~MainWindow()
 {
+    delete currentProject;
     delete ui;
 }
 
@@ -217,5 +256,14 @@ void MainWindow::deleteNode() {
         int index = mainTree->indexOfTopLevelItem(item);
         mainTree->takeTopLevelItem(index);
     }
+
+}
+
+void MainWindow::onItemClicked (QTreeWidgetItem* item, int column) {
+    auto* doc = item->data(0, Qt::UserRole + 1).value<DocumentItem*>(); //returning nullptr for some reason
+    QString hier = "";
+    if (doc != nullptr)
+        hier= doc->getHeirarchy();
+    ui->statusbar->showMessage(hier, 3000);
 
 }

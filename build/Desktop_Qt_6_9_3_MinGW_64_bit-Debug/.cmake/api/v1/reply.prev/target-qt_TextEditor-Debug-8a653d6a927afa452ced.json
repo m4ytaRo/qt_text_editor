@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 67,
+				"line" : 72,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 50,
+				"line" : 55,
 				"parent" : 0
 			},
 			{
@@ -382,7 +382,10 @@
 				6,
 				8,
 				10,
-				12
+				12,
+				15,
+				17,
+				18
 			]
 		}
 	],
@@ -509,7 +512,10 @@
 				6,
 				8,
 				10,
-				12
+				12,
+				15,
+				17,
+				18
 			]
 		},
 		{
@@ -521,7 +527,10 @@
 				7,
 				9,
 				11,
-				13
+				13,
+				14,
+				16,
+				19
 			]
 		},
 		{
@@ -535,14 +544,14 @@
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				14
+				20
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				15
+				21
 			]
 		}
 	],
@@ -619,6 +628,39 @@
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
 			"path" : "singlechoicequestion.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "documentitem.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "systemfolderitem.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "systemfolderitem.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "project.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "project.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "documentitem.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

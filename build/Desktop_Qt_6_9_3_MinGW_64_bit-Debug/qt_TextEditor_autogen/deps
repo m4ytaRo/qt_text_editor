@@ -8,15 +8,24 @@ qt_TextEditor_autogen/timestamp: \
 	D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
 	D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
 	D:/QT_PROJ/qt_TextEditor/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/qt_TextEditor_autogen/moc_predefs.h \
+	D:/QT_PROJ/qt_TextEditor/documentitem.cpp \
+	D:/QT_PROJ/qt_TextEditor/documentitem.h \
 	D:/QT_PROJ/qt_TextEditor/main.cpp \
 	D:/QT_PROJ/qt_TextEditor/mainwindow.cpp \
 	D:/QT_PROJ/qt_TextEditor/mainwindow.h \
+	D:/QT_PROJ/qt_TextEditor/project.cpp \
+	D:/QT_PROJ/qt_TextEditor/project.h \
 	D:/QT_PROJ/qt_TextEditor/question.cpp \
 	D:/QT_PROJ/qt_TextEditor/question.h \
+	D:/QT_PROJ/qt_TextEditor/rootitem.cpp \
+	D:/QT_PROJ/qt_TextEditor/rootitem.h \
 	D:/QT_PROJ/qt_TextEditor/singlechoicequestion.cpp \
 	D:/QT_PROJ/qt_TextEditor/singlechoicequestion.h \
+	D:/QT_PROJ/qt_TextEditor/systemfolderitem.cpp \
+	D:/QT_PROJ/qt_TextEditor/systemfolderitem.h \
 	D:/QT_PROJ/qt_TextEditor/test.cpp \
 	D:/QT_PROJ/qt_TextEditor/test.h \
+	E:/QT/6.9.3/mingw_64/include/QtCore/QList \
 	E:/QT/6.9.3/mingw_64/include/QtCore/q17memory.h \
 	E:/QT/6.9.3/mingw_64/include/QtCore/q20functional.h \
 	E:/QT/6.9.3/mingw_64/include/QtCore/q20iterator.h \
@@ -190,6 +199,7 @@ qt_TextEditor_autogen/timestamp: \
 	E:/QT/6.9.3/mingw_64/include/QtWidgets/QPushButton \
 	E:/QT/6.9.3/mingw_64/include/QtWidgets/QSplitter \
 	E:/QT/6.9.3/mingw_64/include/QtWidgets/QTreeWidget \
+	E:/QT/6.9.3/mingw_64/include/QtWidgets/QTreeWidgetItem \
 	E:/QT/6.9.3/mingw_64/include/QtWidgets/qabstractbutton.h \
 	E:/QT/6.9.3/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
 	E:/QT/6.9.3/mingw_64/include/QtWidgets/qabstractitemview.h \

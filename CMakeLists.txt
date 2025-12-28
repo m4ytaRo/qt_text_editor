@@ -27,6 +27,12 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         test.h test.cpp
         question.h question.cpp
         singlechoicequestion.h singlechoicequestion.cpp
+        documentitem.h
+        systemfolderitem.h systemfolderitem.cpp
+        project.h project.cpp
+        documentitem.cpp
+        rootitem.h rootitem.cpp
+
 
     )
 # Define target properties for Android with Qt 6 as:

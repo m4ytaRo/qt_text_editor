@@ -6,6 +6,8 @@
 #include <QListView>
 #include <QTreeWidget>
 
+#include "Project.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -30,6 +32,7 @@ private slots:
     void setFontBold(bool bold);
     void setFontUnderlined(bool underlined);
     void setFontItalic (bool italic);
+    void onItemClicked (QTreeWidgetItem* item, int column);
 
     void increaseFontSize();
 
@@ -43,6 +46,8 @@ private:
     QSplitter* mainSplitter;
     QTreeWidget* mainTree;
     QListView* listView;
+
+    Project* currentProject;
 
     void setupConnections ();
     void setupUiCustom () ;
