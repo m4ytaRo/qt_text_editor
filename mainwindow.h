@@ -25,9 +25,7 @@ public:
     ~MainWindow();
 
     QString getTextEditContent () const {
-        if (!ui)
-            return ui->textEdit->toPlainText();
-        return nullptr;
+        return QString(ui->textEdit->toPlainText());
     }
 
 

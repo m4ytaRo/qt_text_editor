@@ -1,5 +1,5 @@
 #include "project.h"
-
+#include "mainwindow.h"
 
 
 
@@ -37,10 +37,14 @@ void Project::setCurrentItem(DocumentItem* item) {
     if (currentItemOpened != nullptr) {
         currentItemOpened->setContent(currentContent);
     }
-    qDebug() << currentContent;
+
     currentItemOpened = item;
 
     setCurrentContent(currentItemOpened->getContent());
 }
 
+
+void Project::syncConentWithTextEdit () {
+    setCurrentContent(currentMainWindow->getTextEditContent());
+}
 

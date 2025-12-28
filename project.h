@@ -30,12 +30,14 @@ public:
 
     void setCurrentItem(DocumentItem* item);
 
+    DocumentItem* getCurrentItem() {
+        return currentItemOpened;
+    }
+
     QString getCurrentContent() const {
         return currentContent;
     }
-    void syncConentWithTextEdit () {
-        setCurrentContent(currentMainWindow->getTextEditContent());
-    }
+    void syncConentWithTextEdit ();
 
 
 private:

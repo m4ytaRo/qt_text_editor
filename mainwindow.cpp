@@ -283,8 +283,11 @@ void MainWindow::onItemClicked (QTreeWidgetItem* item, int column) {
         hier= doc->getHeirarchy();
     statusLabel->setText(hier);
 
-    QString localContent = ui->textEdit->toPlainText();
-    currentProject->setCurrentItem(doc);
-    ui->textEdit->setText(currentProject->getCurrentContent());
+
+    if (doc != currentProject->getCurrentItem()) {
+        currentProject->syncConentWithTextEdit();
+        currentProject->setCurrentItem(doc);
+        ui->textEdit->setText(currentProject->getCurrentContent());
+    }
 
 }
